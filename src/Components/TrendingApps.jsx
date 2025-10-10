@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router';
 import AppCard from './appCard';
 
 const TrendingApps = () => {
-  const { apps } = useDataLoadHook();
+  const { apps, loading } = useDataLoadHook();
   const appsSlice = apps.slice(0, 8);
   const navigate = useNavigate('');
 
-  return (
+ return (
     <div className="container mx-auto px-[3%] md:px-0">
       <div className="space-y-4 text-center mb-[40px]">
         <h2 className="text-[26px] md:text-[32px] lg:text-[48px] font-bold text-[#001931] text-center">
@@ -18,11 +18,14 @@ const TrendingApps = () => {
           Explore All Trending Apps on the Market developed by us
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
-        {appsSlice.map(app => (
-          <AppCard key={app.id} app={app}></AppCard>
-        ))}
-      </div>
+      {loading ? (
+        'loading ...'
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+          {appsSlice &&
+            appsSlice.map(app => <AppCard key={app.id} app={app}></AppCard>)}
+        </div>
+      )}
       <div className="flex justify-center items-center mt-[40px]">
         <button
           onClick={() => navigate('/apps')}
@@ -34,5 +37,6 @@ const TrendingApps = () => {
     </div>
   );
 };
+
 
 export default TrendingApps;

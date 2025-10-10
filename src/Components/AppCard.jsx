@@ -3,11 +3,15 @@ import iconDownloads from '../assets/icon-downloads.png';
 import iconRatings from '../assets/icon-ratings.png';
 
 const AppCard = ({ app }) => {
-  const { title, ratingAvg, downloads } = app;
+  const { title, ratingAvg, downloads, image} = app;
   console.log(app);
   return (
     <div className="w-full p-4 rounded-sm bg-white space-y-4 shadow-lg">
-      <div className="w-full h-[316px] bg-[#D9D9D9] rounded-lg"></div>
+      <div className="w-full h-[316px] bg-[#D9D9D9] rounded-lg"><img
+                src={image}
+                alt={image}
+                className="w-full h-auto object-contain"
+              /></div>
       <h4 className="text-xl font-medium text-[#001931]">{title}</h4>
       <div className="flex justify-between items-center">
         <p className="px-[10px] py-[6px] text-[#00D390] font-medium text-base bg-[#F1F5E8] rounded-sm flex gap-2 items-center">
