@@ -1,9 +1,12 @@
 import React from 'react';
+import Banner from '../Components/Banner';
+import TrendingApps from '../Components/TrendingApps';
 
 const Home = () => {
   return (
     <div>
-      <h3 className="text-center font-bold">Home</h3>
+      <Banner></Banner>
+      <TrendingApps></TrendingApps>
     </div>
   );
 };
