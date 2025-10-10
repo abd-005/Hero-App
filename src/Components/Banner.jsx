@@ -39,7 +39,7 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        <div className="max-w-2/3 md:max-w-1/2 w-full mx-auto h-auto mt-[40px]">
+        <div className="md:max-w-1/2 w-full mx-auto h-auto mt-[40px]">
           <img className="w-full h-full" src={hero} alt="" />
         </div>
       </div>
@@ -49,34 +49,37 @@ const Banner = () => {
         </h3>
         <div className="flex flex-wrap gap-6 justify-center items-center">
           <div className="max-w-[342px] w-full text-center  space-y-4">
-            <p className="text-base font-normal text-white">Total Downloads</p>
+            
             <h3 className="text-[48px] md:text-[56px] lg:text-[64px] font-extrabold text-white">
               29.6M
             </h3>
+            <span className="text-base font-normal text-white">Total Downloads</span>
             <p className="text-base font-normal text-white">
               21% more than last month
             </p>
           </div>
           <div className="max-w-[342px] w-full text-center space-y-4">
-            <span className="text-base font-normal text-white">
-              Total Downloads
-            </span>
+            
             <h3 className="text-[48px] md:text-[56px] lg:text-[64px] font-extrabold text-white">
-              29.6M
+              906k
             </h3>
+            <span className="text-base font-normal text-white">
+              Total Reviews
+            </span>
             <p className="text-base font-normal text-white">
-              21% more than last month
+              46% More Than Last Month
             </p>
           </div>
           <div className="max-w-[342px] w-full text-center space-y-4">
-            <span className="text-base font-normal text-white">
-              Total Downloads
-            </span>
+            
             <h3 className="text-[48px] md:text-[56px] lg:text-[64px] font-extrabold text-white">
-              29.6M
+              132+
             </h3>
+            <span className="text-base font-normal text-white">
+              Active Apps
+            </span>
             <p className="text-base font-normal text-white">
-              21% more than last month
+              31% More Will Launch
             </p>
           </div>
         </div>

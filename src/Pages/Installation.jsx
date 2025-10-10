@@ -1,11 +1,176 @@
-import React from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+import {
+  getInstalled,
+  removeInstalled,
+} from '../utilities/installed.js';
+import useData from '../Hooks/useData.jsx';
+import InstalledCart from './InstalledCart';
+import {
+  TbSortAscendingNumbers,
+  TbSortDescendingNumbers,
+} from 'react-icons/tb';
+import { MdDownload } from 'react-icons/md';
+import { Bounce, toast } from 'react-toastify';
+
+const UninstallContext = createContext('');
 
 const Installation = () => {
-    return (
-        <div>
-            <h3 className="text-center font-bold">Installation</h3>
-        </div>
+  const [installed, setInstalled] = useState([]);
+  const { apps, loading } = useData();
+
+  useEffect(() => {
+    let InstalledStoreData = getInstalled();
+    const installedApps =
+      apps && apps.filter(app => InstalledStoreData.includes(app.id));
+    setInstalled(installedApps);
+  }, [apps]);
+
+  const [selected, setSelected] = useState('Sort by Download or Size');
+  const [open, setOpen] = useState(false);
+
+  const options = [
+    'Download: Low to High',
+    'Download: High to Low',
+    'Size: Low to High',
+    'Size: High to Low',
+  ];
+
+  const handleSort = sortType => {
+    setSelected(sortType);
+    if (sortType === 'Download: Low to High') {
+      let sortInstalled = [...installed].sort(
+        (a, b) => a.downloads - b.downloads
+      );
+      setInstalled(sortInstalled);
+    } else if (sortType === 'Download: High to Low') {
+      let sortInstalled = [...installed].sort(
+        (a, b) => b.downloads - a.downloads
+      );
+      setInstalled(sortInstalled);
+    } else if (sortType === 'Size: Low to High') {
+      let sortInstalled = [...installed].sort((x, y) => x.size - y.size);
+      setInstalled(sortInstalled);
+    } else if (sortType === 'Size: High to Low') {
+      let sortInstalled = [...installed].sort((x, y) => y.size - x.size);
+      setInstalled(sortInstalled);
+    }
+  };
+
+    const handleUninstall = id => {
+    removeInstalled(id);
+    const newInstallItem = installed.filter(app => app.id !== id);
+    setInstalled(newInstallItem);
+    const unInstallItem = installed.filter(app => app.id === id);
+    toast.success(
+      `${unInstallItem.map(el => el.appName)} Unstall Successfully`,
+      {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+        transition: Bounce,
+      }
     );
+  };
+
+  return (
+    <div className="container mx-auto px-[3%] md:px-0 pt-[80px]">
+      <div className="space-y-4 text-center mb-[40px]">
+        <h2 className="text-[26px] md:text-[32px] lg:text-[48px] font-bold text-[#001931] text-center">
+          Your Installed Apps
+        </h2>
+        <p className="font-normal text-base md:text-lg lg:text-xl text-[#627382] text-center">
+          Explore All Trending Apps on the Market developed by us
+        </p>
+      </div>
+      <div className="flex flex-col md:flex-row justify-between items-center mb-4 gap-4">
+        <h3 className="text-2xl font-semibold text-[#001931]">
+          {installed.length} Apps Installed
+        </h3>
+        <div className="relative inline-block">
+          <button
+            onClick={() => {
+              setOpen(!open);
+            }}
+            className="select relative p-[2px] border cursor-pointer min-w-[250px] w-full"
+          >
+            <span className=" py-[11px] px-3  text-sm font-medium flex items-center justify-between gap-2 ">
+              {selected}
+            </span>
+          </button>
+          {open && (
+            <div className="absolute mt-4 bg-white shadow-lg border border-[#dbdbdb]  z-50 w-full">
+              {options.map(option => (
+                <ul key={option}>
+                  {option === 'Download: Low to High' && (
+                    <li
+                      onClick={() => {
+                        handleSort(option);
+                        setOpen(false);
+                      }}
+                      className="px-4 py-3 hover:bg-[#f0f0f0] cursor-pointer text-base bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-medium flex items-center gap-2"
+                    >
+                      <MdDownload className="text-lg text-[#632EE3] font-medium" />
+                      Low to High
+                    </li>
+                  )}
+                  {option === 'Download: High to Low' && (
+                    <li
+                      onClick={() => {
+                        handleSort(option);
+                        setOpen(false);
+                      }}
+                      className="px-4 py-3 hover:bg-[#f0f0f0] cursor-pointer text-base bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-medium flex items-center gap-2"
+                    >
+                      <MdDownload className="text-lg text-[#632EE3] font-medium" />
+                      High to Low
+                    </li>
+                  )}
+                  {option === 'Size: Low to High' && (
+                    <li
+                      onClick={() => {
+                        handleSort(option);
+                        setOpen(false);
+                      }}
+                      className="px-4 py-3 hover:bg-[#f0f0f0] cursor-pointer text-base bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-medium flex items-center gap-2"
+                    >
+                      <TbSortAscendingNumbers className="text-lg text-[#632EE3] font-medium" />
+                      Low to High
+                    </li>
+                  )}
+                  {option === 'Size: High to Low' && (
+                    <li
+                      onClick={() => {
+                        handleSort(option);
+                        setOpen(false);
+                      }}
+                      className="px-4 py-3 hover:bg-[#f0f0f0] cursor-pointer text-base bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent font-medium flex items-center gap-2"
+                    >
+                      <TbSortDescendingNumbers className="text-lg text-[#632EE3] font-medium" />
+                      High to Low
+                    </li>
+                  )}
+                </ul>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div>
+        {installed.map(install => (
+          <UninstallContext.Provider value={handleUninstall}>
+            <InstalledCart key={install.id} install={install}></InstalledCart>
+          </UninstallContext.Provider>
+        ))}
+      </div>
+    </div>
+  );
 };
 
+export { UninstallContext };
 export default Installation;
