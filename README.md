@@ -48,6 +48,50 @@ Notifications: React Toastify
 
 Asynchronous Operations: Native fetch API
 
+### Getting Started
 
+Want to get the project running on your local machine? Just follow these simple steps.
+
+Prerequisites
+Make sure you have Node.js (version 16 or later) and npm installed on your system.
+
+Installation
+Clone the repository:
+
+Bash
+
+```
+git clone https://github.com/CodeWithArafat1/hero-apps.git
+```
+
+Navigate to the project directory:
+
+Bash
+
+cd hero-apps
+Install the necessary dependencies:
+
+Bash
+
+### npm install
+
+Running the Development Server
+To start the development server, run the following command:
+
+Bash
+
+### npm run dev
+
+Now, open your browser and navigate to http://localhost:5173 (or the port shown in your terminal).
+
+### Available Scripts
+
+npm run dev: Starts the development server.
+
+npm run build: Builds the app for production.
+
+npm run lint: Lints the code for potential errors.
+
+npm run preview: Previews the production build locally.
 
 © 2025 HERO.IO. All Rights Reserved.
