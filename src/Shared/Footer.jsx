@@ -30,10 +30,10 @@ const footerData = {
   socials: {
     title: "Follow Us",
     links: [
-      { name: "Facebook", href: "https://www.facebook.com/ArafatNill69", Icon: Facebook },
-      { name: "Twitter", href: "#", Icon: Twitter },
-      { name: "Instagram", href: "#", Icon: Instagram },
-      { name: "Linkedin", href: "#", Icon: Linkedin },
+      { name: "Facebook", href: "https://www.facebook.com/ab0ahad", Icon: Facebook },
+      { name: "Twitter", href: "https://www.x.com/ab0ahad", Icon: Twitter },
+      { name: "Instagram", href: "https://www.instagram.com/ab0ahad", Icon: Instagram },
+      { name: "Linkedin", href: "https://www.linkedin.com/ab0ahad", Icon: Linkedin },
     ],
   },
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 import useDataLoadHook from '../Hooks/useData';
 import { useNavigate } from 'react-router';
-import AppCard from './appCard';
+import AppCard from './AppsCard';
+import LoadUi from './LoadUi';
 
 const TrendingApps = () => {
   const { apps, loading } = useDataLoadHook();
@@ -18,8 +19,8 @@ const TrendingApps = () => {
           Explore All Trending Apps on the Market developed by us
         </p>
       </div>
-      {loading ? (
-        'loading ...'
+      {loading === true ? (
+        <LoadUi></LoadUi>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
           {appsSlice &&

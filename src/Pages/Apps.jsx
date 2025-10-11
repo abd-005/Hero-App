@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import AppCard from "../Components/appCard";
+import AppCard from "../Components/AppsCard";
 import useData from "../Hooks/useData";
 import EmptyState from "../Components/EmptyState";
+import LoadUi from "../Components/LoadUi";
 
 const Apps = () => {
   const { apps, loading } = useData();
@@ -14,7 +15,7 @@ const Apps = () => {
     : apps;
 
   return (
-    <div className="container mx-auto px-[3%] md:px-0 pt-[80px]">
+    <div className="w-11/12 mx-auto px-[3%] md:px-0 pt-[80px]">
       <div className="space-y-4 text-center mb-[40px]">
         <h2 className="text-[26px] md:text-[32px] lg:text-[48px] font-bold text-[#001931] text-center">
           Our All Applications
@@ -53,8 +54,8 @@ const Apps = () => {
           />
         </label>
       </div>
-      {loading ? (
-        "loading ..."
+      {loading === true ? (
+        <LoadUi count={20}/>
       ) : (
                 <div>
           {searchItem.length > 0 ? (
@@ -64,7 +65,7 @@ const Apps = () => {
               ))}
             </div>
           ) : (
-            <EmptyState></EmptyState>
+            searchModify && <EmptyState></EmptyState>
           )}
         </div>
       )}

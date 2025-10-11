@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import iconDownloads from '../assets/icon-downloads.png';
 import iconRatings from '../assets/icon-ratings.png';
 import { UninstallContext } from './Installation';
+import formatNumber from '../utilities/formatNumber';
 
 const InstalledCart = ({ install }) => {
-  const { id, title, appName, ratingAvg, downloads, size,image } = install;
+  const { id, title, ratingAvg, downloads, size,image } = install;
   const handleUnInstall = useContext(UninstallContext);
 
   return (
@@ -22,11 +23,11 @@ const InstalledCart = ({ install }) => {
           <div className="flex gap-4">
             <p className=" text-[#00D390] font-medium text-base flex gap-2 items-center">
               <img className="w-4 h-4" src={iconDownloads} alt="" />
-              <span>{downloads}M</span>
+              <span>{formatNumber(downloads)}</span>
             </p>
             <p className="text-[#FF8811] font-medium text-base flex gap-2 items-center">
               <img className="w-4 h-4" src={iconRatings} alt="" />
-              <span>{ratingAvg}</span>
+              <span>{ratingAvg.toFixed(1)}</span>
             </p>
             <p className="text-[#627382] font-medium text-base flex gap-2 items-center">
               <span>{size} MB</span>

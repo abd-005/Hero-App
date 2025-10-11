@@ -1,7 +1,7 @@
-import { LuDownload } from 'react-icons/lu';
 import iconDownloads from '../assets/icon-downloads.png';
 import iconRatings from '../assets/icon-ratings.png';
 import { useNavigate } from 'react-router';
+import formatNumber from '../utilities/formatNumber';
 
 const AppCard = ({ app }) => {
     const { id, title, ratingAvg, downloads, image } = app;
@@ -21,11 +21,11 @@ const AppCard = ({ app }) => {
         <div className="flex justify-between items-center">
           <p className="px-[10px] py-[6px] text-[#00D390] font-medium text-base bg-slate-100 rounded-sm flex gap-2 items-center">
             <img className="w-4 h-4" src={iconDownloads} alt="" />
-            <span>{downloads}M</span>
+            <span>{formatNumber(downloads)}</span>
           </p>
           <p className="px-[10px] py-[6px] text-[#FF8811] font-medium text-base bg-[#FFF0E1] rounded-4xl flex gap-2 items-center">
             <img className="w-4 h-4" src={iconRatings} alt="" />
-            <span>{ratingAvg}</span>
+            <span>{ratingAvg.toFixed(1)}</span>
           </p>
         </div>
     </div>

@@ -16,7 +16,7 @@ const UninstallContext = createContext('');
 
 const Installation = () => {
   const [installed, setInstalled] = useState([]);
-  const { apps, loading } = useData();
+  const { apps } = useData();
 
   useEffect(() => {
     let InstalledStoreData = getInstalled();
@@ -78,7 +78,7 @@ const Installation = () => {
   };
 
   return (
-    <div className="container mx-auto px-[3%] md:px-0 pt-[80px]">
+    <div className="w-11/12 mx-auto px-[3%] md:px-0 pt-[80px]">
       <div className="space-y-4 text-center mb-[40px]">
         <h2 className="text-[26px] md:text-[32px] lg:text-[48px] font-bold text-[#001931] text-center">
           Your Installed Apps
