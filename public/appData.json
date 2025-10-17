@@ -1,6 +1,6 @@
 [
   {
-    "image": "../src/assets/Apps/facebook.png",
+    "image": "./src/assets/Apps/facebook.png",
     "title": "Facebook",
     "appName": "Facebook",
     "companyName": "Meta Platforms, Inc.",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/youtube.png",
+    "image": "./src/assets/Apps/youtube.png",
     "title": "YouTube",
     "appName": "YouTube",
     "companyName": "Google LLC",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/whatsapp.png",
+    "image": "./src/assets/Apps/whatsapp.png",
     "title": "WhatsApp Messenger",
     "appName": "WhatsApp Messenger",
     "companyName": "Meta Platforms, Inc.",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/instagram.png",
+    "image": "./src/assets/Apps/instagram.png",
     "title": "Instagram",
     "appName": "Instagram",
     "companyName": "Meta Platforms, Inc.",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/spotify.png",
+    "image": "./src/assets/Apps/spotify.png",
     "title": "Spotify",
     "appName": "Spotify",
     "companyName": "Spotify AB",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/tiktok.png",
+    "image": "./src/assets/Apps/tiktok.png",
     "title": "TikTok",
     "appName": "TikTok",
     "companyName": "ByteDance",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/telegram.png",
+    "image": "./src/assets/Apps/telegram.png",
     "title": "Telegram",
     "appName": "Telegram",
     "companyName": "Telegram FZ-LLC",
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/twitter.png",
+    "image": "./src/assets/Apps/twitter.png",
     "title": "Twitter (X)",
     "appName": "Twitter (X)",
     "companyName": "X Corp.",
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/netflix.png",
+    "image": "./src/assets/Apps/netflix.png",
     "title": "Netflix",
     "appName": "Netflix",
     "companyName": "Netflix, Inc.",
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/amazon.png",
+    "image": "./src/assets/Apps/amazon.png",
     "title": "Amazon Shopping",
     "appName": "Amazon Shopping",
     "companyName": "Amazon Mobile LLC",
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/googlemaps.png",
+    "image": "./src/assets/Apps/googlemaps.png",
     "title": "Google Maps",
     "appName": "Google Maps",
     "companyName": "Google LLC",
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/gmail.png",
+    "image": "./src/assets/Apps/gmail.png",
     "title": "Gmail",
     "appName": "Gmail",
     "companyName": "Google LLC",
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/snapchat.png",
+    "image": "./src/assets/Apps/snapchat.png",
     "title": "Snapchat",
     "appName": "Snapchat",
     "companyName": "Snap Inc.",
@@ -247,7 +247,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/pinterest.png",
+    "image": "./src/assets/Apps/pinterest.png",
     "title": "Pinterest",
     "appName": "Pinterest",
     "companyName": "Pinterest",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/reddit.png",
+    "image": "./src/assets/Apps/reddit.png",
     "title": "Reddit",
     "appName": "Reddit",
     "companyName": "Reddit, Inc.",
@@ -285,7 +285,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/teams.png",
+    "image": "./src/assets/Apps/teams.png",
     "title": "Microsoft Teams",
     "appName": "Microsoft Teams",
     "companyName": "Microsoft Corporation",
@@ -304,7 +304,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/zoom.png",
+    "image": "./src/assets/Apps/zoom.png",
     "title": "Zoom",
     "appName": "Zoom",
     "companyName": "Zoom Video Communications",
@@ -323,7 +323,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/uber.png",
+    "image": "./src/assets/Apps/uber.png",
     "title": "Uber",
     "appName": "Uber",
     "companyName": "Uber Technologies, Inc.",
@@ -342,7 +342,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/airbnb.png",
+    "image": "./src/assets/Apps/airbnb.png",
     "title": "Airbnb",
     "appName": "Airbnb",
     "companyName": "Airbnb, Inc.",
@@ -361,7 +361,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/duolingo.png",
+    "image": "./src/assets/Apps/duolingo.png",
     "title": "Duolingo",
     "appName": "Duolingo",
     "companyName": "Duolingo",
@@ -380,7 +380,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/candycrush.png",
+    "image": "./src/assets/Apps/candycrush.png",
     "title": "Candy Crush Saga",
     "appName": "Candy Crush Saga",
     "companyName": "King",
@@ -399,7 +399,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/pokemongo.png",
+    "image": "./src/assets/Apps/pokemongo.png",
     "title": "Pokémon GO",
     "appName": "Pokémon GO",
     "companyName": "Niantic, Inc.",
@@ -418,7 +418,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/capcut.png",
+    "image": "./src/assets/Apps/capcut.png",
     "title": "CapCut",
     "appName": "CapCut",
     "companyName": "Bytedance Pte. Ltd.",
@@ -437,7 +437,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/adobeacrobat.png",
+    "image": "./src/assets/Apps/adobeacrobat.png",
     "title": "Adobe Acrobat Reader",
     "appName": "Adobe Acrobat Reader",
     "companyName": "Adobe",
@@ -456,7 +456,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/linkedin.png",
+    "image": "./src/assets/Apps/linkedin.png",
     "title": "LinkedIn",
     "appName": "LinkedIn",
     "companyName": "Microsoft Corporation",
@@ -475,7 +475,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/googledrive.png",
+    "image": "./src/assets/Apps/googledrive.png",
     "title": "Google Drive",
     "appName": "Google Drive",
     "companyName": "Google LLC",
@@ -494,7 +494,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/vlc.png",
+    "image": "./src/assets/Apps/vlc.png",
     "title": "VLC Media Player",
     "appName": "VLC Media Player",
     "companyName": "VideoLabs",
@@ -513,7 +513,7 @@
     ]
   },
   {
-    "image": "../src/assets/Apps/samsunghealth.png",
+    "image": "./src/assets/Apps/samsunghealth.png",
     "title": "Samsung Health",
     "appName": "Samsung Health",
     "companyName": "Samsung Electronics Co., Ltd.",
